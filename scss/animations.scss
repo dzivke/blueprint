@@ -1,0 +1,88 @@
+// ====================================================================================
+// Easing
+// ====================================================================================
+
+
+.easing-medium {
+	@include vendor(transition, all $speed-easing-medium ease-in-out);
+	&:hover {
+		@include vendor(transition, all $speed-easing-medium ease-in-out);
+	}
+}
+
+.easing-slow {
+	@include vendor(transition, all $speed-easing-slow ease-in-out);
+	&:hover {
+		@include vendor(transition, all $speed-easing-slow ease-in-out);
+	}
+}
+
+.easing-fast {
+	@include vendor(transition, all $speed-easing-fast ease-in-out);
+	&:hover {
+		@include vendor(transition, all $speed-easing-fast ease-in-out);
+	}
+}
+
+.easing-none {
+@include vendor(transition, none);
+	&:hover {
+		@include vendor(transition, none);
+	}
+}
+
+
+// ====================================================================================
+// Fades 
+// ====================================================================================
+
+// Fade In
+
+@keyframes fade-in {
+	from {@include opacity(0, 0);}
+	to {@include opacity(1, 100);}
+}
+
+@-webkit-keyframes fade-in {
+	from {@include opacity(0, 0);}
+	to {@include opacity(1, 100);}
+}
+
+@-moz-keyframes fade-in {
+	from {@include opacity(0, 0);}
+	to {@include opacity(1, 100);}
+}
+
+@-o-keyframes fade-in {
+	from {@include opacity(0, 0);}
+	to {@include opacity(1, 100);}
+}
+
+
+.fade-in-slow {
+	@include vendor(animation, fade-in $speed-slow forwards);
+}
+.fade-in-medium {
+	@include vendor(animation, fade-in $speed-medium forwards);
+}
+.fade-in-fast {
+	@include vendor(animation, fade-in $speed-fast forwards);
+}
+
+
+// Body Fade
+
+body {@include vendor(animation, fade-in $speed-medium forwards);}
+
+
+// Links
+
+a.fade-link, .fade-link {
+	@include opacity(1, 100);
+	@include vendor(transition, opacity $speed-easing-medium ease-out);
+
+    &:hover {
+	@include opacity(0.5, 50);
+	@include vendor(transition, opacity 0.25s ease-out);
+    }
+}

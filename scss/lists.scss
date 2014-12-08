@@ -1,0 +1,61 @@
+// ====================================================================================
+// Lists
+// ====================================================================================
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  &.ul-default {
+    list-style-type: disc;
+    margin-bottom: $key-line-height / 2;
+    padding-left: $key-line-height;
+  }
+
+  &.ul-icon {
+    list-style-type: none;
+    margin-bottom: $key-line-height / 2;
+    padding-left: $key-line-height;
+  }
+
+  &.ol-default {
+    list-style-type: decimal;
+    margin-bottom: $key-line-height / 2;
+    padding-left: $key-line-height;
+  }
+}
+
+dl {
+  line-height: $key-line-height;
+  margin-bottom: $key-line-height / 2;
+
+  dt {
+    font-weight: bold;
+    margin-top: $key-line-height / 2;
+  }
+
+  dd {
+    margin: 0;
+  }
+}
+
+ol {
+  list-style-type: decimal;
+
+  &.list-roman {
+    list-style-type: roman;
+  }
+  
+}
+
+
+ul {
+  &.list-bullets {
+    list-style-type: bullets;
+  }
+}

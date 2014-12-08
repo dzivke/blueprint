@@ -1,0 +1,283 @@
+// ====================================================================================
+// Fundamentals
+// ====================================================================================
+
+*, *:before, *:after {
+	@include boxsizing(border-box);
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+	height:100%;
+	margin: 0;
+    padding: 0;
+}
+
+body  {
+	background-color: #fff;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	height: 100%;
+	margin: 0;
+    padding: 0;
+}
+
+article, aside, figure, footer, header, hgroup, menu, nav, section, content {display: block; padding: 0; margin: 0;}
+
+
+// Box Sizing
+
+.border-box {
+  	@include boxsizing(border-box);
+  	outline: none;
+}
+
+.content-box {
+  	@include boxsizing(content-box);
+  	outline: none;
+}
+
+
+// ====================================================================================
+// Padding & Margins - Pixels
+// ====================================================================================
+
+/* Paddings - Multiples of 1 up to 10 */
+
+@for $i from 1 through 10 {
+	$m : $i * 1;
+	.p#{$m} { padding : $m + px !important; }
+	.pl#{$m} { padding-left : $m + px !important; }
+	.pb#{$m} { padding-bottom : $m + px !important; }
+	.pt#{$m} { padding-top : $m + px !important; }
+	.pr#{$m} { padding-right : $m + px !important; }
+	.ptb#{$m} { padding:  $m + px 0px !important; }
+	.plr#{$m} { padding:  0px $m + px !important; }
+}
+
+/* Margins - Multiples of 1 up to 10 */
+
+@for $i from 1 through 10 {
+	$m : $i * 1;
+	.m#{$m} { margin : $m + px !important; }
+	.ml#{$m} { margin-left : $m + px !important; }
+	.mb#{$m} { margin-bottom : $m + px !important; }
+	.mt#{$m} { margin-top : $m + px !important; }
+	.mr#{$m} { margin-right : $m + px !important; }
+	.mtb#{$m} { margin:  $m + px 0px !important; }
+	.mlr#{$m} { margin:  0px $m + px !important; }
+}
+
+/* Paddings - Multiples of 5 up to 100 */
+
+@for $i from 1 through 20 {
+	$m : $i * 5;
+	.p#{$m} { padding : $m + px !important; }
+	.pl#{$m} { padding-left : $m + px !important; }
+	.pb#{$m} { padding-bottom : $m + px !important; }
+	.pt#{$m} { padding-top : $m + px !important; }
+	.pr#{$m} { padding-right : $m + px !important; }
+	.ptb#{$m} { padding:  $m + px 0px !important; }
+	.plr#{$m} { padding:  0px $m + px !important; }
+}
+
+/* Margins - Multiples of 5 up to 100 */
+
+@for $i from 1 through 20 {
+	$m : $i * 5;
+	.m#{$m} { margin : $m + px !important; }
+	.ml#{$m} { margin-left : $m + px !important; }
+	.mb#{$m} { margin-bottom : $m + px !important; }
+	.mt#{$m} { margin-top : $m + px !important; }
+	.mr#{$m} { margin-right : $m + px !important; }
+	.mtb#{$m} { margin:  $m + px 0px !important; }
+	.mlr#{$m} { margin:  0px $m + px !important; }
+}
+
+
+// ====================================================================================
+// Padding & Margins - Percentages
+// ====================================================================================
+
+
+/* Percentage Paddings - Multiples of 1 up to 10 */
+
+@for $i from 1 through 10 {
+	$m : $i * 1;
+	.percent-p#{$m} { padding : $m * 1% !important; }
+	.percent-pl#{$m} { padding-left : $m * 1% !important; }
+	.percent-pb#{$m} { padding-bottom : $m * 1% !important; }
+	.percent-pt#{$m} { padding-top : $m * 1% !important; }
+	.percent-pr#{$m} { padding-right : $m * 1% !important; }
+	.percent-ptb#{$m} { padding:  $m * 1% 0px !important; }
+	.percent-plr#{$m} { padding:  0px $m * 1% !important; }
+}
+
+/* Percentage Margins - Multiples of 1 up to 10 */
+
+@for $i from 1 through 10 {
+	$m : $i * 1;
+	.percent-m#{$m} { margin : $m * 1% !important; }
+	.percent-ml#{$m} { margin-left : $m * 1% !important; }
+	.percent-mb#{$m} { margin-bottom : $m * 1% !important; }
+	.percent-mt#{$m} { margin-top : $m * 1% !important; }
+	.percent-mr#{$m} { margin-right : $m * 1% !important; }
+	.percent-mtb#{$m} { margin:  $m * 1% 0px !important; }
+	.percent-mlr#{$m} { margin:  0px $m * 1% !important; }
+}
+
+
+// ====================================================================================
+// Shortcuts
+// ====================================================================================
+
+.cf {height: 0px; width: 100%; clear: both;}
+
+.textcenter {text-align: center;}
+.textleft {text-align: left;}
+.textright {text-align: right;}
+
+.dblock { display: block; }
+.dinlineblock { display: inline-block; }
+.dinline { display: inline;}
+.dnone { display: none; }
+
+.dblock-important { display: block !important; }
+.dnone-important {display: none !important;}
+
+.relative {position: relative;}
+.absolute {position: absolute;} 
+.fixed {
+	position: fixed;
+	// Kickstart hardware acceleration
+	@include vendor(transform, translateZ(0));
+} 
+
+.fright {float:right;}
+.fleft {float:left;}
+
+.visible {visibility: visible;}
+.hidden {visibility: hidden;}
+
+.rp0 {right: 0px;}
+.lp0 {left: 0px;}
+.tp0 {top: 0px;}
+.bp0 {bottom: 0px;}
+
+.pb0 {padding-bottom: 0px;}
+.mb0 {margin-bottom: 0px;}
+
+.xmauto {margin-left: auto; margin-right: auto;}
+.xmauto-important {margin-left: auto !important; margin-right: auto !important;}
+
+.nopadding {padding: 0 !important;}
+.nomargin {margin: 0 !important; }
+
+.z0 {z-index: 0;}
+.z1 {z-index: 1;}
+.z2 {z-index: 2;}
+.z3 {z-index: 3;}
+
+.zminus1 {z-index: -1;}
+.zminus2 {z-index: -2;}
+.zminus3 {z-index: -3;}
+.ztop {z-index: 99999;}
+
+.cursorpointer {cursor: pointer;}
+.cursordefault {cursor: default;}
+
+// Fix for flickering / disappearing elements
+.hardware-acceleration {@include vendor(transform, translateZ(0))}
+
+
+// ====================================================================================
+// Borders
+// ====================================================================================
+
+.border-solid {border: solid;}
+.border-dotted {border: dotted;}
+.border-dashed {border: dashed;}
+
+.border-1 {border-width: 1px;}
+.border-2 {border-width: 2px;}
+.border-3 {border-width: 3px;}
+.border-4 {border-width: 4px;}
+.border-5 {border-width: 5px;}
+.border-6 {border-width: 6px;}
+
+.rounded-3 {@include radius(3px);}
+.rounded-5 {@include radius(5px);}
+.rounded-10 {@include radius(10px);}
+.rounded-20 {@include radius(20px);}
+.rounded-30 {@include radius(30px);}
+
+
+// ====================================================================================
+// Selection
+// ====================================================================================
+
+::selection {
+	 background: $key;
+	 color: $key-inverted;
+	 text-shadow: none;
+}
+
+::-moz-selection {
+	 background: $key;
+	 color: $key-inverted;
+	 text-shadow: none;
+}
+
+
+// ====================================================================================
+// Code
+// ====================================================================================
+
+code {
+	font-family: $courier;
+	display: block;
+}
+
+// ====================================================================================
+// Backgrounds
+// ====================================================================================
+
+.bg-key {
+	background-color: $key;
+	color: $key-inverted;
+}
+
+.bg-key-dark {
+	background-color: $key-dark;
+	color: $key-inverted;
+}
+
+.bg-key-inverted {
+	background-color: $key-inverted;
+	color: $key;
+}
+
+.bg-key-secondary {
+	background-color: $key-secondary;
+}
+
+
+// ====================================================================================
+// Opacity
+// ====================================================================================
+
+.opacity100{@include opacity(1, 100);}
+.opacity90{@include opacity(0.9, 90);}
+.opacity80{@include opacity(0.8, 80);}
+.opacity70{@include opacity(0.7, 70);}
+.opacity60{@include opacity(0.6, 60);}
+.opacity50{@include opacity(0.5, 50);}
+.opacity40{@include opacity(0.4, 40);}
+.opacity30{@include opacity(0.3, 30);}
+.opacity20{@include opacity(0.2, 20);}
+.opacity10{@include opacity(0.1, 10);}
+.opacity0{@include opacity(0, 0);}
+

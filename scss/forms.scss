@@ -1,0 +1,135 @@
+// ====================================================================================
+// Inputs
+// ====================================================================================
+
+input, textarea {
+  @include radius(5px);
+  padding: 15px;
+  width: 100%;
+
+  &:focus, &:active {
+    outline: none;
+    background: $key;
+    color: $key-inverted;
+    border-color: $key;
+  }
+  
+}
+
+// Half Inputs 
+
+.input-half-one {
+  width: 48%;
+  float: left;
+  margin-right: 4%;
+}
+
+.input-half-two {
+  width: 48%;
+  float: left;
+  margin-right: 0;
+}
+
+
+// Labels
+
+label {font-weight: 500;}
+
+// Select
+
+select {
+    @extend input;
+    @extend textarea;
+    @include shadow(null);
+    color: $key;
+    cursor: pointer;
+    @extend .easing-medium;
+    &:hover {
+      background: $key-inverted;
+    }
+    option {
+      padding:0px;
+    }
+}
+
+// Checkboxes
+
+input[type="checkbox"] {
+  display:none;
+}
+input[type="checkbox"] + label span {
+  display:inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  padding-top: 10px;
+  vertical-align: -15%;
+  cursor: pointer;
+  background: $key;
+  @extend .easing-medium;
+  @include radius(3px);
+  border: 2px solid $key;
+  background: none;
+}
+input[type="checkbox"]:checked + label span {
+  background: $key;
+  @extend .easing-medium;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  //display:none;
+}
+input[type="radio"] + label span {
+  display:inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  padding-top: 10px;
+  vertical-align: -15%;
+  cursor: pointer;
+  background: $key;
+  @extend .easing-medium;
+  @include radius(3px);
+  border: 2px solid $key;
+  background: none;
+}
+input[type="radio"]:checked + label span {
+  background: $key;
+  @extend .easing-medium;
+  cursor: pointer;
+}
+
+
+
+// Submit Buttons
+
+input[type="submit"] {
+  @extend .btn;
+}
+
+
+// ====================================================================================
+// Placeholders
+// ====================================================================================
+
+
+::-webkit-input-placeholder {
+   color: $key;
+   font-weight: normal;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $key;  
+   font-weight: normal;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $key;  
+   font-weight: normal;
+}
+
+:-ms-input-placeholder {  
+   color: $key;  
+   font-weight: normal;
+}

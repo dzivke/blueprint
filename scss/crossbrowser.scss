@@ -1,0 +1,68 @@
+// ====================================================================================
+// Internet Explorer (Everyone's favourite browser)
+// ====================================================================================
+
+//body {  
+// color: red; /* all browsers, of course */  
+// color : green\9; /* IE8 and below */  
+//}  
+
+//body {  
+// color: red; /* all browsers, of course */  
+// color : green\9; /* IE8 and below */  
+// *color : yellow; /* IE7 and below */  
+//}  
+
+//body {  
+// color: red; /* all browsers, of course */  
+// color : green\9; /* IE8 and below */  
+// *color : yellow; /* IE7 and below */  
+// _color : orange; /* IE6 */  
+//}  
+
+.ie10 {
+}
+
+/*
+@media screen and (min-width: 1200px) {
+.iconexpertise {
+	min-width: 1200px;
+}
+}
+*/
+
+// ====================================================================================
+// Firefox Hacks
+// ====================================================================================
+
+
+
+// FF 2 Hacks
+
+html>/**/body .selector, x:-moz-any-link {
+  
+}
+
+// FF 3 Hacks
+
+html>/**/body .selector, x:-moz-any-link, x:default {
+  
+}
+
+// All FF version Hacks
+
+@-moz-document url-prefix() { 
+
+}
+
+
+// ====================================================================================
+// Opera Hacks
+// ====================================================================================
+
+
+@media not all and (-webkit-min-device-pixel-ratio:0) {  
+   .selector {  
+
+   }  
+}  

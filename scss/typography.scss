@@ -1,0 +1,164 @@
+// ====================================================================================
+// Core Typography
+// ====================================================================================
+
+body {
+  font-family: $key-font-family;
+  font-weight: normal;
+  color: $key-font-color;
+  font-family: $key-font-family;
+  font-size: $key-font-size-fallback-px;
+  font-size: $key-font-size;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  vertical-align: baseline;
+  line-height: $key-line-height;
+}
+
+// Headings
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $key-header-font-family;
+  line-height: $key-header-line-height;
+  font-weight: normal;
+  margin: 0;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+}
+
+h1, .h1 {font-size: $key-font-size * 2.2;}
+h2, .h2 {font-size: $key-font-size * 1.8;}
+h3, .h3 {font-size: $key-font-size * 1.6;}
+h4, .h4 {font-size: $key-font-size * 1.4;}
+h5, .h5 {font-size: $key-font-size * 1.2;}
+h6, .h6 {font-size: $key-font-size * 1.1;}
+
+// Heroes
+
+.superhero {font-size: $key-font-size * 5; line-height: $key-header-line-height;}
+.hero {font-size: $key-font-size * 3.5; line-height: $key-header-line-height;}
+
+// Serifs
+
+.sansserif {font-family: $sans-serif;}
+.serif {font-family: $serif;}
+.mono {font-family: $mono;}
+
+
+// Paragraphs
+
+p.lead {
+  font-size: $key-font-size * 1.1;
+  line-height: ($key-line-height * 1.1);
+  margin: 0;
+}
+
+p {
+  font-size: $key-font-size;
+  margin: 0;
+}
+
+small, p.small, .small {font-size: $key-font-size * 0.8;}
+
+
+
+// ====================================================================================
+// Typographic Utilties
+// ====================================================================================
+
+// Casing & Spacing
+
+.uppercase {text-transform: uppercase;}
+.lowercase {text-transform: lowercase;}
+.capitalize {text-transform: capitalize;}
+.smallcaps {text-transform: small-caps;}
+.spaced {letter-spacing: $key-letter-spacing;}
+.underline {text-decoration: underline;}
+
+
+// Alignment
+
+.tcenter {text-align: center;}
+.tleft {text-align: left;}
+.tright {text-align: right;}
+.tjustify {text-align: justify;}
+
+
+// Weight & Emphasis
+
+.weight900 {font-weight: 900;}
+.weight800 {font-weight: 800;}
+.weight700 {font-weight: 700;}
+.weight600, strong, .strong {font-weight: bold;}
+.weight500 {font-weight: 500;}
+.weight400 {font-weight: 400;}
+.weight300 {font-weight: 300;}
+.weight200 {font-weight: 200;}
+.weight100 {font-weight: 100;}
+
+em, .italic {font-style: italic;}
+
+
+// ====================================================================================
+// Hyperlinks
+// ====================================================================================
+
+a {
+  color: $key;
+  text-decoration: none;
+  font-weight: 500;
+  @extend .easing-medium;
+
+  &:hover {
+    color: $key;
+    text-decoration: underline;
+    @extend .easing-medium;
+  }
+
+  &:active, &:focus {
+    text-decoration: underline;
+    outline: none;
+  }
+
+  &.no-underline {
+    text-decoration: none;
+    &:hover, &:active {
+      text-decoration: none;
+    }
+  }
+
+}
+
+
+// ====================================================================================
+// Quotes & First Elements
+// ====================================================================================
+
+// Blockquote
+
+blockquote {
+  &:before {
+    content: open-quote;
+    font-family: 'Times New Roman', serif;
+    @extend .superhero;
+    line-height: 1em;
+    clear: both;
+    width: 100%;
+    display: block;
+  }
+}
+
+// First Letter & Line
+
+.first-letter {
+  &:first-letter {
+    text-transform: uppercase;
+    @extend h2;
+  }
+}
+
+.first-line {
+  &:first-line {
+    font-weight: bold;
+  }
+}

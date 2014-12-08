@@ -1,0 +1,64 @@
+// ====================================================================================
+// Mixins
+// ====================================================================================
+
+// Boxsizing
+
+@mixin boxsizing($value) {
+  -webkit-box-sizing: $value;
+  -moz-box-sizing: $value;
+  -o-box-sizing: $value;
+  box-sizing: $value;
+}
+
+
+// Vendor Prefixes
+
+@mixin vendor($label, $type) {
+  -webkit-#{$label}: #{$type};
+  -ms-#{$label}: #{$type};
+  -moz-#{$label}: #{$type};
+  -o-#{$label}: #{$type};
+  #{$label}: #{$type};
+}
+
+
+// Shadows
+
+@mixin shadow($value) {
+  -webkit-box-shadow: $value;
+  -moz-box-shadow:    $value;
+  -ms-box-shadow:     $value;
+  -o-box-shadow:      $value;
+  box-shadow:         $value;
+}
+
+// Margins
+
+@mixin xmauto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+// Opacity
+
+@mixin opacity($value, $percentage) {
+  -webkit-opacity: $value;
+  -moz-opacity: $value;
+  -o-opacity: $value;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$percentage)";
+  filter: alpha(opacity=$percentage);
+}
+
+
+// Border Radius
+
+@mixin radius($value) {
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  -o-border-radius: $value;
+  -ms-border-radius: $value;
+  border-radius: $value;
+}

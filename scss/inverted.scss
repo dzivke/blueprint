@@ -1,0 +1,144 @@
+// ====================================================================================
+// Inverted
+// ====================================================================================
+
+
+.inverted {
+
+// Inverted Links
+
+a {
+  color: $key-inverted;
+  text-decoration: underline;
+  @extend .easing-medium;
+
+  &:hover {
+  	text-decoration: none;
+    color: $key-inverted;
+    @extend .easing-medium;
+  }
+
+  &:active, &:focus {
+  	color: $key-inverted;
+    outline: none;
+  }
+  
+  &.no-underline {
+    text-decoration: none;
+    &:hover, &:active {
+      text-decoration: none;
+    }
+  }
+
+}
+
+
+// Buttons
+
+a.btn, .btn {
+    background: $key-inverted;
+    color: $key;
+    text-decoration: none;
+    
+    &:hover {
+      border: 3px solid $key-inverted;
+      background: transparent;
+      color: $key-inverted;
+    }
+
+    &.btn-hollow {
+      background: transparent;
+      border: 3px solid $key-inverted;
+      color: $key-inverted;
+      &:hover {
+        border: 3px solid transparent;
+        background: $key-inverted;
+        color: $key;
+      }
+    }
+}
+
+
+// Forms
+
+input, textarea {
+  background: $key-inverted;
+
+  &:focus, &:active {
+    outline: none;
+    background: $key-inverted;
+    color: $key;
+    border-color: $key-inverted;
+  }
+  
+}
+
+select {
+    @extend input;
+    @extend textarea;
+    @include shadow(null);
+    color: $key-inverted;
+    cursor: pointer;
+    @extend .easynow;
+    &:hover {
+      background: $key;
+    }
+    option {
+      padding:0px;
+    }
+}
+
+
+// Checkboxes
+
+input[type="checkbox"] + label span {
+
+  background: $key-inverted;
+  border-color: $key-inverted;
+}
+input[type="checkbox"]:checked + label span {
+  background: $key-inverted;
+}
+
+
+// Inverted Forms
+
+input, textarea {
+  color: $key-inverted;
+}
+
+::-webkit-input-placeholder {
+   color: $key-inverted;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $key-inverted;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $key-inverted;  
+}
+
+:-ms-input-placeholder {  
+   color: $key-inverted;  
+}
+
+
+// Inverted Rules
+
+hr {
+	border-color: $key-inverted;
+}
+
+
+// Inverted Blockquotes
+
+blockquote {
+  border-color: $key-inverted;
+  &:before {
+    color: $key-inverted;
+  }
+}
+
+
+}

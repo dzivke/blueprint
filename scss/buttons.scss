@@ -1,0 +1,44 @@
+// ====================================================================================
+// Buttons
+// ====================================================================================
+
+a.btn, .btn {
+	display: inline-block;
+	padding: 14px 40px;
+	border: none;
+	-webkit-backface-visibility: hidden;
+	font-size: $key-font-size;
+	font-weight: 600;
+	text-align: center;
+	cursor: pointer;
+	background: $key;
+	color: $key-inverted;
+	border: 3px solid transparent;
+	text-decoration: none;
+	@extend .easing-medium;
+
+	&:hover {
+		background: $key-inverted;
+		color: $key;
+		border-color: $key;
+	}
+
+	&.btn-standard {
+		min-width: 200px;
+	}
+
+	&.btn-centered {
+ 		@extend .xmauto;
+	}
+
+	&.btn-hollow {
+		background: transparent;
+		border: 3px solid $key;
+		color: $key;
+		&:hover {
+			border: 3px solid transparent;
+			background: $key;
+			color: $key-inverted;
+		}
+	}
+}

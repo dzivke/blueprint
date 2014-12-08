@@ -1,0 +1,187 @@
+// ====================================================================================
+// Heights
+// ====================================================================================
+
+.height-fill {height: 100%;}
+.height-auto {height: auto;}
+.height-min-fill {min-height: 100%;}
+.height-max-fill {max-height: 100%;}
+.height-min-fill-im {min-height: 100% !important;}
+.height-max-fill-im {max-height: 100% !important;}
+
+
+// Percentage heights
+
+.h100 {height: 100%;}
+.h90 {height: 90%;}
+.h80 {height: 80%;}
+.h70 {height: 70%;}
+.h60 {height: 60%;}
+.h50 {height: 50%;}
+.h40 {height: 40%;}
+.h30 {height: 30%;}
+.h20 {height: 20%;}
+.h10 {height: 10%;}
+.h5 {height: 5%;}
+.h1 {height: 1%;}
+
+
+// Pixel heights
+
+.hpx500 {height: 500px;}
+.hpx400 {height: 400px;}
+.hpx300 {height: 300px;}
+.hpx200 {height: 200px;}
+.hpx100 {height: 100px;}
+.hpx90 {height: 90px;}
+.hpx80 {height: 80px;}
+.hpx70 {height: 70px;}
+.hpx60 {height: 60px;}
+.hpx50 {height: 50px;}
+.hpx40 {height: 40px;}
+.hpx30 {height: 30px;}
+.hpx20 {height: 20px;}
+.hpx10 {height: 10px;}
+.hpx5 {height: 5px;}
+.hpx1 {height: 1px;}
+
+
+// ====================================================================================
+// Widths
+// ====================================================================================
+
+.width-fill {width: 100%;}
+.width-auto {width: auto;}
+.width-min-fill {min-width: 100%;}
+.width-max-fill {max-width: 100%;}
+.width-min-fill-im {min-width: 100% !important;}
+.width-max-fill-im {max-width: 100% !important;}
+
+// Percentage Widths
+
+.w100 {width: 100%;}
+.w90 {width: 90%;}
+.w80 {width: 80%;}
+.w70 {width: 70%;}
+.w60 {width: 60%;}
+.w50 {width: 50%;}
+.w40 {width: 40%;}
+.w30 {width: 30%;}
+.w20 {width: 20%;}
+.w10 {width: 10%;}
+.w5 {width: 5%;}
+.w1 {width: 1%;}
+
+// Pixel Widths
+
+.wpx500 {width: 500px;}
+.wpx400 {width: 400px;}
+.wpx300 {width: 300px;}
+.wpx200 {width: 200px;}
+.wpx100 {width: 100px;}
+.wpx90 {width: 90px;}
+.wpx80 {width: 80px;}
+.wpx70 {width: 70px;}
+.wpx60 {width: 60px;}
+.wpx50 {width: 50px;}
+.wpx40 {width: 40px;}
+.wpx30 {width: 30px;}
+.wpx20 {width: 20px;}
+.wpx10 {width: 10px;}
+.wpx5 {width: 5px;}
+.wpx1 {width: 1px;}
+
+
+// ====================================================================================
+// Overflow
+// ====================================================================================
+
+.overflow-y-hidden {overflow-y: hidden;}
+.overflow-x-hidden {overflow-x: hidden;}
+
+.overflow-y-scroll {overflow-y: scroll;}
+.overflow-x-scroll {overflow-y: scroll;}
+
+.overflow-y-visible {overflow-y: visible;}
+.overflow-x-visible {overflow-y: visible;}
+
+// ====================================================================================
+// Vertical Centering
+// ====================================================================================
+
+
+// Pseudo Element Method
+
+.vc-block {
+  text-align: center;
+}
+ 
+.vc-block:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+.vc-centered {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  max-width: 99%;
+}
+
+
+// Table Method
+
+.vc-table-block {
+  display: table;
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+} 
+
+.vc-table-centered {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
+
+
+// ====================================================================================
+// Rules
+// ====================================================================================
+
+hr { 
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid $key;
+
+  &.hr-inverted {
+    border-color: $key-inverted;
+  }
+
+}
+
+
+// ====================================================================================
+// Shapes
+// ====================================================================================
+
+.circle {@include radius(50%);}
+
+.block-200 {height: 200px; width: 200px;}
+.block-150 {height: 150px; width: 150px;}
+.block-100 {height: 100px; width: 100px;}
+.block-50 {height: 50px; width: 50px;}
+
+
+// ====================================================================================
+// Panels
+// ====================================================================================
+
+.panel {
+  padding: 4%;
+  overflow-x: scroll;
+}

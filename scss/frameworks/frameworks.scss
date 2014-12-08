@@ -1,0 +1,46 @@
+// ====================================================================================
+// Bootstrap Modifications
+// ====================================================================================
+
+
+// Fixed Width 
+
+.container-fixed {
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	max-width: $breakpoint-lg;
+}
+
+// Other Modifications
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+// Nested Row Margin Fix
+
+.row {
+	.row {
+		margin: 0;
+	}
+}
+
+
+@media all and (min-width: $breakpoint-md) {
+
+	.container-fixed {
+		max-width: $breakpoint-lg;
+	}
+
+}
+
+@media all and (max-width: $breakpoint-md) {
+
+	.container-fixed {
+		max-width: $breakpoint-md;
+		width: $breakpoint-md;
+	}
+
+}

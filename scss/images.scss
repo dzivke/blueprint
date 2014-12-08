@@ -1,0 +1,22 @@
+// ====================================================================================
+// Images
+// ====================================================================================
+
+img {
+	max-width: 100%;
+	height: auto;
+
+	&.img-blueprint {
+		@include vendor(filter, grayscale(100%) sepia(100%) saturate(100%) hue-rotate(176deg) contrast(1.3));
+	}
+}
+
+// Backgrounds
+
+.background-cover {
+	@include vendor(background-size, cover);
+}
+
+.background-repeat-x {background-repeat: repeat-x;}
+.background-repeat-y {background-repeat: repeat-y;}
+.background-no-repeat {background-repeat: no-repeat;}
