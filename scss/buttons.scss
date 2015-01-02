@@ -29,6 +29,7 @@ a.btn, .btn {
 
 	&.btn-centered {
  		@extend .xmauto;
+ 		display: block;
 	}
 
 	&.btn-hollow {

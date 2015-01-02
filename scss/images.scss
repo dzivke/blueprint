@@ -14,7 +14,7 @@ img {
 // Backgrounds
 
 .background-cover {
-	@include vendor(background-size, cover);
+	@include vendor(background-size, cover !important);
 }
 
 .background-repeat-x {background-repeat: repeat-x;}
