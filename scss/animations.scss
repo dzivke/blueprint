@@ -37,7 +37,6 @@
 // ====================================================================================
 
 // Fade In
-
 @keyframes fade-in {
 	from {@include opacity(0, 0);}
 	to {@include opacity(1, 100);}
@@ -59,24 +58,16 @@
 }
 
 
-.fade-in-slow {
-	@include vendor(animation, fade-in $speed-slow forwards);
-}
-.fade-in-medium {
-	@include vendor(animation, fade-in $speed-medium forwards);
-}
-.fade-in-fast {
-	@include vendor(animation, fade-in $speed-fast forwards);
-}
+.fade-in-slow {@include vendor(animation, fade-in $speed-slow);}
+.fade-in-medium {@include vendor(animation, fade-in $speed-medium);}
+.fade-in-fast {@include vendor(animation, fade-in $speed-fast);}
 
 
 // Body Fade
-
-body {@include vendor(animation, fade-in $speed-medium forwards);}
+body {@include vendor(animation, fade-in $speed-medium);}
 
 
 // Links
-
 a.fade-link, .fade-link {
 	@include opacity(1, 100);
 	@include vendor(transition, opacity $speed-easing-medium ease-out);
