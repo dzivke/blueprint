@@ -32,6 +32,10 @@ a.btn, .btn {
  		display: block;
 	}
 
+	&.btn-circular {
+		@extend .rounded-50;
+	}
+
 	&.btn-hollow {
 		background: transparent;
 		border: 3px solid $key;
