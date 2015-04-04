@@ -140,13 +140,13 @@ article, aside, figure, footer, header, hgroup, menu, nav, section, content {dis
 .textleft {text-align: left;}
 .textright {text-align: right;}
 
-.dblock { display: block; }
-.dinlineblock { display: inline-block; }
-.dinline { display: inline;}
-.dnone { display: none; }
+.dblock, .db { display: block; }
+.dinlineblock, .dib { display: inline-block; }
+.dinline, .di { display: inline;}
+.dnone, .dn { display: none; }
 
-.dblock-important { display: block !important; }
-.dnone-important {display: none !important;}
+.dblock-important, .dbi { display: block !important; }
+.dnone-important, .dni {display: none !important;}
 
 .relative {position: relative;}
 .absolute {position: absolute;} 
